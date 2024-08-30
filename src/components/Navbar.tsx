@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { fetchCategories } from '../services/api';
 import { useAuth } from '../context/AuthContext';
 
@@ -14,7 +14,7 @@ const Navbar: React.FC = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
   const [cartCount, setCartCount] = useState<number>(0);
   const { isAuthenticated, logout } = useAuth();
-  const navigate = useNavigate();
+
 
   useEffect(() => {
     fetchCategories()
