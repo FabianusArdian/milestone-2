@@ -1,46 +1,51 @@
-# Getting Started with Create React App
+# Milestone-2 "Haha Store"
+<p>HaHa Store An online shop that sells all your needs</p> 
+<p>This store uses API [Platzi's Fake API](https://fakeapi.platzi.com/)</p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Features
+1. Login and Register Page: Able to login and register via API
+2. Product Listing Page: Display a list of products retrieved from the API.
+3. Product Category Page: Display a list of products based on their category.
+4. Product Detail Page: Show detailed information about a selected product including images, descriptions, and price.
+5. Shopping Cart: Enable users to add products to a shopping cart and manage their selections.
 
-## Available Scripts
+### Installation
+1. Clone the repository:
 
-In the project directory, you can run:
+```
+git clone https://github.com/revou-fsse-5/milestone-2-FabianusArdian.git
+```
 
-### `npm start`
+2. Install dependencies
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+```
+npm install
+```
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+3. Run the application:
 
-### `npm test`
+```
+npm start
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+4. Automated to open your lovely browser or Click local server in your terminal
 
-### `npm run build`
+### Images
+All Products and Categories
+![All Products and Categories](./doc.image/1.JPG)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Register and Login Form
+![Login Form](./doc.image/2.JPG)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![Register Form](./doc.image/3.JPG)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Product Detail Page
+![Product Detail Page](./doc.image/4.JPG)
 
-### `npm run eject`
+Cart Page
+![Cart Page](./doc.image/5.JPG)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Deployment Link
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+[https://milestone-2-hahastore.vercel.app/](https://milestone-2-hahastore.vercel.app/)
