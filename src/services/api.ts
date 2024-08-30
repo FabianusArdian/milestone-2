@@ -38,9 +38,9 @@ export const fetchProducts = async () => {
       id: product.id,
       title: product.title,
       price: product.price,
-      image: product.images[0]?.replace(/^["|"]$/g, '') || 'fallback_image_url',
+      image: product.images[0]?.replace(/^\[\"|\"\]$/g, '') || 'fallback_image_url',
       description: product.description,
-      images: product.images.map((img: string) => img.replace(/^["|"]$/g, '')),
+      images: product.images.map((img: string) => img.replace(/^\[\"|\"\]$/g, '')),
       category: product.category?.id || 0,  // Ensure category ID is included and correctly mapped
     }));
   } catch (error) {
@@ -65,9 +65,9 @@ export const fetchProductsByCategory = async (categoryId: string) => {
       id: product.id,
       title: product.title,
       price: product.price,
-      image: product.images[0]?.replace(/^["|"]$/g, '') || 'fallback_image_url',
+      image: product.images[0]?.replace(/^\[\"|\"\]$/g, '') || 'fallback_image_url',
       description: product.description,
-      images: product.images.map((img: string) => img.replace(/^["|"]$/g, '')),
+      images: product.images.map((img: string) => img.replace(/^\[\"|\"\]$/g, '')),
       category: product.category?.id || 0,  // Ensure category ID is included and correctly mapped
     }));
   } catch (error) {
