@@ -22,7 +22,7 @@ const HomePage: React.FC = () => {
   const [products, setProducts] = useState<Product[]>([]);
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
   const [categories, setCategories] = useState<{ [key: number]: string }>({});
-  const { isAuthenticated } = useAuth();
+  const { isAuthenticated } = useAuth(); // Use isAuthenticated from AuthContext
 
   useEffect(() => {
     fetchProducts()
@@ -33,7 +33,7 @@ const HomePage: React.FC = () => {
       .then((categories: Category[]) => {
         const categoryMap: { [key: number]: string } = {};
         categories.forEach((category: Category) => {
-          categoryMap[category.id] = category.name;  // Map category IDs to their names
+          categoryMap[category.id] = category.name;
         });
         setCategories(categoryMap);
       })

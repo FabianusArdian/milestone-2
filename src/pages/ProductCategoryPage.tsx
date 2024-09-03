@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { fetchProductsByCategory, fetchCategories } from '../services/api';
 import ProductDetail from '../components/ProductDetail';
+import { useAuth } from '../context/AuthContext';
 
 interface Product {
   id: number;
@@ -23,6 +24,7 @@ const ProductCategoryPage: React.FC = () => {
   const [products, setProducts] = useState<Product[]>([]);
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
   const [categories, setCategories] = useState<{ [key: number]: string }>({});
+  const { isAuthenticated } = useAuth(); // Use isAuthenticated from AuthContext
 
   useEffect(() => {
     if (id) {

@@ -3,9 +3,11 @@ import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import { useNavigate, Link } from 'react-router-dom';
 import { login } from '../services/api';
+import { useAuth } from '../context/AuthContext';
 
 const LoginPage: React.FC = () => {
   const navigate = useNavigate();
+  const { loginUser } = useAuth();
 
   const formik = useFormik({
     initialValues: {
@@ -20,6 +22,7 @@ const LoginPage: React.FC = () => {
       try {
         const data = await login(values.email, values.password);
         localStorage.setItem('token', data.token);
+        loginUser(); 
         navigate('/');
       } catch (error) {
         console.error(error);
